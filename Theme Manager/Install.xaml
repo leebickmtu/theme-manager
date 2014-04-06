@@ -1,0 +1,152 @@
+﻿<Page x:Class="Install"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="548" d:DesignWidth="646"
+      Title="Install Theme"
+      Name="Install">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+
+        <!-- Window Header -->
+        <Canvas Height="100" HorizontalAlignment="Left" Name="canTitleBar" VerticalAlignment="Top" Width="646" Grid.Column="0" Grid.Row="0">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Images/top_bar_7.png" />
+            </Canvas.Background>
+            <Image Canvas.Left="27" Canvas.Top="12" Height="77" Name="Image1" Stretch="Uniform" Width="82" Source="/Images/icon_badge_wb.png" />
+            <Button Height="77" Name="btnBadge" Width="82" Opacity="0" Canvas.Left="27" Canvas.Top="12" />
+            <Label Canvas.Left="138" Canvas.Top="30" Content="Theme Manager" Height="41" Name="Label1" Foreground="White" FontSize="22" Width="169" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" />
+            <Image Canvas.Left="605" Canvas.Top="12" Height="15" Name="imgClose" Stretch="Fill" Width="15" Source="/Images/close_button.png" />
+            <Image Canvas.Left="586" Canvas.Top="12" Height="15" Name="imgMinimize" Stretch="Fill" Width="15" Source="/Images/min_button.png" />
+            <Button Content="X" Height="15" Name="btnClose" Width="15" Opacity="0" Canvas.Left="605" Canvas.Top="12" />
+            <Button Content="_" Height="15" Name="btnMinimize" Width="15" Opacity="0" Canvas.Left="586" Canvas.Top="12" />
+        </Canvas>
+
+        <!-- Breadcrumb Content -->
+        <Canvas Grid.Column="0" Grid.Row="1" Background="Black" Height="2"></Canvas>
+        <Canvas Grid.Column="0" Grid.Row="2" Background="#FFF1F5FB" Height="30">
+            <Image Canvas.Left="15" Canvas.Top="4" Height="22" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left_rounded_blue.png" />
+            <Image Canvas.Left="26" Canvas.Top="4" Height="22" Stretch="Fill" Width="40" Source="/Images/breadcrumb_middle_blue.png" />
+            <Image Canvas.Left="66" Canvas.Top="4" Height="22" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right_blue.png" />
+            <Label Canvas.Left="15" Canvas.Top="4" Margin="10,0,0,0" Content="Start" Height="22" Foreground="White" FontSize="12" Width="62" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" />
+            <Button Canvas.Left="26" Canvas.Top="4" Height="22" Width="40" Name="btnBCstart" Content="1" Opacity="0" />
+
+            <Image Canvas.Left="67" Canvas.Top="4" Height="22" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left.png" />
+            <Image Canvas.Left="78" Canvas.Top="4" Height="22" Stretch="Fill" Width="100" Source="/Images/breadcrumb_middle.png" />
+            <Image Canvas.Left="178" Canvas.Top="4" Height="22" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right.png" />
+            <Label Canvas.Left="67" Canvas.Top="4" Margin="20,0,0,0" Content="Install a Theme" Height="22" Foreground="White" FontSize="12" Width="92" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" />
+            <Button Canvas.Left="78" Canvas.Top="4" Height="22" Width="100" Name="btnBCinstall" Content="0" Opacity="0" />
+        </Canvas>
+        <Canvas Grid.Column="0" Grid.Row="3" Background="#FFA4ADB4" Height="2"></Canvas>
+
+        <!-- Window Content -->
+        <Canvas Grid.Column="0" Grid.Row="4">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Images/menu_item_back.png" />
+            </Canvas.Background>
+
+            <TextBox Canvas.Left="280" Canvas.Top="40" Width="175" Foreground="#FF333333" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" Name="txtName"/>
+            <Label Canvas.Left="160" Canvas.Top="40" Width="115" Content="Name:" Foreground="#FF333333" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Right" />
+
+            <!-- Theme -->
+            <Label Canvas.Left="48" Canvas.Top="106" Width="115" Content="Theme" Foreground="#FF333333" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Right" />
+            <Image Canvas.Left="173" Canvas.Top="106" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left_rounded.png" />
+            <Image Canvas.Left="184" Canvas.Top="106" Height="26" Stretch="Fill" Width="78" Source="/Images/breadcrumb_middle.png" />
+            <Image Canvas.Left="262" Canvas.Top="106" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right_rounded.png" />
+            <Label Canvas.Left="184" Canvas.Top="106" Margin="0,0,0,0" Content="Browse" Height="26" Foreground="White" FontSize="13" Width="78" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Center" />
+            <Button Canvas.Left="184" Canvas.Top="106" Height="26" Width="78" Opacity="0" Name="btnTheme" AllowDrop="True" />
+            <Image Canvas.Left="277" Canvas.Top="104" Height="30" Width="30" Source="/Images/red_x.png" Name="imgHasTheme" />
+            <Button Canvas.Left="277" Canvas.Top="104" Height="30" Width="30" Opacity="0" Name="btnHasTheme" IsEnabled="False" />
+            
+
+            <!-- Explorer -->
+            <Label Canvas.Left="48" Canvas.Top="160" Width="115" Content="Explorer" Foreground="#FF333333" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Right" />
+            <Image Canvas.Left="173" Canvas.Top="160" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left_rounded.png" />
+            <Image Canvas.Left="184" Canvas.Top="160" Height="26" Stretch="Fill" Width="78" Source="/Images/breadcrumb_middle.png" />
+            <Image Canvas.Left="262" Canvas.Top="160" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right_rounded.png" />
+            <Label Canvas.Left="184" Canvas.Top="160" Margin="0,0,0,0" Content="Browse" Height="26" Foreground="White" FontSize="13" Width="78" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Center" />
+            <Button Canvas.Left="184" Canvas.Top="160" Height="26" Width="78" Opacity="0" Name="btnExplorer" AllowDrop="True" />
+            <Image Canvas.Left="277" Canvas.Top="158" Height="30" Width="30" Source="/Images/red_x.png" Name="imgHasExplorer" />
+            <Button Canvas.Left="277" Canvas.Top="158" Height="30" Width="30" Opacity="0" Name="btnHasExplorer" IsEnabled="False" />
+
+            <!-- ExplorerFrame -->
+            <Label Canvas.Left="48" Canvas.Top="214" Width="115" Content="ExplorerFrame" Foreground="#FF333333" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Right" />
+            <Image Canvas.Left="173" Canvas.Top="214" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left_rounded.png" />
+            <Image Canvas.Left="184" Canvas.Top="214" Height="26" Stretch="Fill" Width="78" Source="/Images/breadcrumb_middle.png" />
+            <Image Canvas.Left="262" Canvas.Top="214" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right_rounded.png" />
+            <Label Canvas.Left="184" Canvas.Top="214" Margin="0,0,0,0" Content="Browse" Height="26" Foreground="White" FontSize="13" Width="78" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Center" />
+            <Button Canvas.Left="184" Canvas.Top="214" Height="26" Width="78" Opacity="0" Name="btnExplorerFrame" AllowDrop="True" />
+            <Image Canvas.Left="277" Canvas.Top="212" Height="30" Width="30" Source="/Images/red_x.png" Name="imgHasExplorerFrame" />
+            <Button Canvas.Left="277" Canvas.Top="212" Height="30" Width="30" Opacity="0" Name="btnHasExplorerFrame" IsEnabled="False" />
+
+            <!-- Shell32 -->
+            <Label Canvas.Left="48" Canvas.Top="268" Width="115" Content="Shell32" Foreground="#FF333333" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Right" />
+            <Image Canvas.Left="173" Canvas.Top="268" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left_rounded.png" />
+            <Image Canvas.Left="184" Canvas.Top="268" Height="26" Stretch="Fill" Width="78" Source="/Images/breadcrumb_middle.png" />
+            <Image Canvas.Left="262" Canvas.Top="268" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right_rounded.png" />
+            <Label Canvas.Left="184" Canvas.Top="268" Margin="0,0,0,0" Content="Browse" Height="26" Foreground="White" FontSize="13" Width="78" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Center" />
+            <Button Canvas.Left="184" Canvas.Top="268" Height="26" Width="78" Opacity="0" Name="btnShell32" AllowDrop="True" />
+            <Image Canvas.Left="277" Canvas.Top="266" Height="30" Width="30" Source="/Images/red_x.png" Name="imgHasShell32" />
+            <Button Canvas.Left="277" Canvas.Top="266" Height="30" Width="30" Opacity="0" Name="btnHasShell32" IsEnabled="False" />
+
+            <!-- Vertical Separator -->
+            <Image Canvas.Left="322" Canvas.Top="90" Height="220" Stretch="Fill" Width="2" Source="/Images/vSep_middle.png"/>
+            
+            <!-- OobeFldr -->
+            <Label Canvas.Left="483" Canvas.Top="106" Width="115" Content="OobeFldr" Foreground="#FF333333" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Left" />
+            <Image Canvas.Left="373" Canvas.Top="106" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left_rounded.png" />
+            <Image Canvas.Left="384" Canvas.Top="106" Height="26" Stretch="Fill" Width="78" Source="/Images/breadcrumb_middle.png" />
+            <Image Canvas.Left="462" Canvas.Top="106" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right_rounded.png" />
+            <Label Canvas.Left="384" Canvas.Top="106" Margin="0,0,0,0" Content="Browse" Height="26" Foreground="White" FontSize="13" Width="78" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Center" />
+            <Button Canvas.Left="384" Canvas.Top="106" Height="26" Width="78" Opacity="0" Name="btnOobeFldr" AllowDrop="True" />
+            <Image Canvas.Left="340" Canvas.Top="104" Height="30" Width="30" Source="/Images/red_x.png" Name="imgHasOobeFldr" />
+            <Button Canvas.Left="340" Canvas.Top="104" Height="30" Width="30" Opacity="0" Name="btnHasOobeFldr" IsEnabled="False" />
+
+            <!-- Timedate -->
+            <Label Canvas.Left="483" Canvas.Top="160" Width="115" Content="Timedate" Foreground="#FF333333" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Left" />
+            <Image Canvas.Left="373" Canvas.Top="160" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left_rounded.png" />
+            <Image Canvas.Left="384" Canvas.Top="160" Height="26" Stretch="Fill" Width="78" Source="/Images/breadcrumb_middle.png" />
+            <Image Canvas.Left="462" Canvas.Top="160" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right_rounded.png" />
+            <Label Canvas.Left="384" Canvas.Top="160" Margin="0,0,0,0" Content="Browse" Height="26" Foreground="White" FontSize="13" Width="78" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Center" />
+            <Button Canvas.Left="384" Canvas.Top="160" Height="26" Width="78" Opacity="0" Name="btnTimedate" AllowDrop="True" />
+            <Image Canvas.Left="340" Canvas.Top="158" Height="30" Width="30" Source="/Images/red_x.png" Name="imgHasTimeDate" />
+            <Button Canvas.Left="340" Canvas.Top="158" Height="30" Width="30" Opacity="0" Name="btnHasTimeDate" IsEnabled="False" />
+
+            <!-- Logon -->
+            <Label Canvas.Left="483" Canvas.Top="214" Width="115" Content="Logon" Foreground="#FF333333" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Left" />
+            <Image Canvas.Left="373" Canvas.Top="214" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left_rounded.png" />
+            <Image Canvas.Left="384" Canvas.Top="214" Height="26" Stretch="Fill" Width="78" Source="/Images/breadcrumb_middle.png" />
+            <Image Canvas.Left="462" Canvas.Top="214" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right_rounded.png" />
+            <Label Canvas.Left="384" Canvas.Top="214" Margin="0,0,0,0" Content="Browse" Height="26" Foreground="White" FontSize="13" Width="78" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Center" />
+            <Button Canvas.Left="384" Canvas.Top="214" Height="26" Width="78" Opacity="0" Name="btnLogon" AllowDrop="True" />
+            <Image Canvas.Left="340" Canvas.Top="212" Height="30" Width="30" Source="/Images/red_x.png" Name="imgHasLogon" />
+            <Button Canvas.Left="340" Canvas.Top="212" Height="30" Width="30" Opacity="0" Name="btnHasLogon" IsEnabled="False" />
+
+            <!-- Blur -->
+            <Label Canvas.Left="373" Canvas.Top="268" Width="115" Content="Border Blur" Foreground="#FF333333" FontSize="16" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Left" />
+            <Image Canvas.Left="340" Canvas.Top="266" Height="30" Width="30" Source="/Images/green_check.png" Name="imgHasBlur" />
+            <Button Canvas.Left="340" Canvas.Top="266" Height="30" Width="30" Opacity="0" Name="btnHasBlur" IsEnabled="True" />
+
+            <Image Canvas.Left="519" Canvas.Top="364" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left_rounded.png" />
+            <Image Canvas.Left="530" Canvas.Top="364" Height="26" Stretch="Fill" Width="78" Source="/Images/breadcrumb_middle.png" />
+            <Image Canvas.Left="608" Canvas.Top="364" Height="26" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right_rounded.png" />
+            <Label Canvas.Left="530" Canvas.Top="364" Margin="0,0,0,0" Content="Install" Height="26" Foreground="White" FontSize="13" Width="78" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" HorizontalContentAlignment="Center" />
+            <Button Canvas.Left="530" Canvas.Top="364" Height="26" Width="78" Opacity="0" Name="btnInstall" />
+
+        </Canvas>
+        
+    </Grid>
+
+</Page>

@@ -1,0 +1,73 @@
+﻿<Page x:Class="Download"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="548" d:DesignWidth="646"
+      Title="Download Theme"
+      Name="Download">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="2"/>
+            <RowDefinition Height="400"/>
+        </Grid.RowDefinitions>
+
+        <!-- Window Header -->
+        <Canvas Height="100" HorizontalAlignment="Left" Name="canTitleBar" VerticalAlignment="Top" Width="646" Grid.Column="0" Grid.Row="0">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Images/top_bar_7.png" />
+            </Canvas.Background>
+            <Image Canvas.Left="27" Canvas.Top="12" Height="77" Name="Image1" Stretch="Uniform" Width="82" Source="/Images/icon_badge_wb.png" />
+            <Button Height="77" Name="btnBadge" Width="82" Opacity="0" Canvas.Left="27" Canvas.Top="12" />
+            <Label Canvas.Left="138" Canvas.Top="30" Content="Theme Manager" Height="41" Name="Label1" Foreground="White" FontSize="22" Width="169" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" />
+            <Image Canvas.Left="605" Canvas.Top="12" Height="15" Name="imgClose" Stretch="Fill" Width="15" Source="/Images/close_button.png" />
+            <Image Canvas.Left="586" Canvas.Top="12" Height="15" Name="imgMinimize" Stretch="Fill" Width="15" Source="/Images/min_button.png" />
+            <Button Content="X" Height="15" Name="btnClose" Width="15" Opacity="0" Canvas.Left="605" Canvas.Top="12" />
+            <Button Content="_" Height="15" Name="btnMinimize" Width="15" Opacity="0" Canvas.Left="586" Canvas.Top="12" />
+        </Canvas>
+
+        <!-- Breadcrumb Content -->
+        <Canvas Grid.Column="0" Grid.Row="1" Background="Black" Height="2"></Canvas>
+        <Canvas Grid.Column="0" Grid.Row="2" Background="#FFF1F5FB" Height="30">
+            <Image Canvas.Left="15" Canvas.Top="4" Height="22" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left_rounded_blue.png" />
+            <Image Canvas.Left="26" Canvas.Top="4" Height="22" Stretch="Fill" Width="40" Source="/Images/breadcrumb_middle_blue.png" />
+            <Image Canvas.Left="66" Canvas.Top="4" Height="22" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right_blue.png" />
+            <Label Canvas.Left="15" Canvas.Top="4" Margin="10,0,0,0" Content="Start" Height="22" Foreground="White" FontSize="12" Width="62" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" />
+            <Button Canvas.Left="26" Canvas.Top="4" Height="22" Width="40" Name="btnBCstart" Content="1" Opacity="0" />
+
+            <Image Canvas.Left="67" Canvas.Top="4" Height="22" Stretch="Fill" Width="11" Source="/Images/breadcrumb_left.png" />
+            <Image Canvas.Left="78" Canvas.Top="4" Height="22" Stretch="Fill" Width="80" Source="/Images/breadcrumb_middle.png" />
+            <Image Canvas.Left="158" Canvas.Top="4" Height="22" Stretch="Fill" Width="11" Source="/Images/breadcrumb_right.png" />
+            <Label Canvas.Left="67" Canvas.Top="4" Margin="21,0,0,0" Content="Download" Height="22" Foreground="White" FontSize="12" Width="62" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" />
+            <Button Canvas.Left="78" Canvas.Top="4" Height="22" Width="80" Name="btnBCdownload" Content="0" Opacity="0" />
+        </Canvas>
+        <Canvas Grid.Column="0" Grid.Row="3" Background="#FFA4ADB4" Height="2"></Canvas>
+
+        <!-- Window Content -->
+        <Grid Grid.Column="0" Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="400"/>
+            </Grid.RowDefinitions>
+            <Canvas Grid.Column="0" Grid.Row="0" Height="400">
+                <Canvas.Background>
+                    <ImageBrush ImageSource="/Images/menu_item_back.png" />
+                </Canvas.Background>
+                <Image Canvas.Left="55" Canvas.Top="110" Height="180" Stretch="Fill" Width="180" Source="/Images/deviantart-07.png" />
+                <Label Canvas.Left="257" Canvas.Top="150" Content="deviantART" Height="35" Foreground="#FF333333" FontSize="16" Width="120" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" />
+                <TextBlock Canvas.Left="257" Canvas.Top="175" Height="77" Foreground="#FF333333" FontSize="12" Width="346" FontWeight="Bold" FontStyle="Normal" FontFamily="Calibri" Text="deviantART is an online community showcasing various forms of user-made artwork. This includes a large catalog of quality Windows 7 themes available for free." TextWrapping="Wrap" Padding="5" />
+                <Button Canvas.Left="15" Canvas.Top="15" Height="370" Width="616" Name="btnDownload" Opacity="0" />
+            </Canvas>
+        </Grid>
+
+    </Grid>
+</Page>

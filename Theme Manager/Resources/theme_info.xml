@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Themes>
+  <Theme ID="Aero">
+    <Theme>Aero.theme</Theme>
+    <Explorer>
+    </Explorer>
+    <OobeFldr>
+    </OobeFldr>
+    <ExplorerFrame>
+    </ExplorerFrame>
+    <Shell32>
+    </Shell32>
+    <Timedate>
+    </Timedate>
+    <Logon>
+    </Logon>
+  </Theme>
+</Themes>

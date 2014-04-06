@@ -1,0 +1,6 @@
+﻿<NavigationWindow x:Class="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Theme Manager" Height="548" Width="646" WindowStyle="None" ShowsNavigationUI="False" Icon="/Images/icon1.ico" ResizeMode="CanResize" MinWidth="646" MaxWidth="646" MinHeight="548" MaxHeight="548">
+
+</NavigationWindow>
